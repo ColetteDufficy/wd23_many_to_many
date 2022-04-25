@@ -34,6 +34,7 @@ def create_biting():
 
     human = human_repository.select(human_id)
     zombie = zombie_repository.select(zombie_id)
+    
     biting = Biting(human, zombie)
     biting_repository.save(biting)
     return redirect('/bitings')
@@ -65,8 +66,6 @@ def update_biting(id):
 
     biting_repository.update(biting)
     return redirect('/bitings')
-
-
 
 
 
